@@ -25,14 +25,10 @@ const withPWA = withPWAInit({
   ],
 });
 
-const generateEntry = (entry) => {
+const generateAppDirEntry = (entry) => {
   const registerJs = path.join(__dirname, "node_modules/next-pwa/register.js");
 
   return entry().then((entries) => {
-    // Register on page directory
-    if (entries["main.js"] && !entries["main.js"].includes(registerJs)) {
-      entries["main.js"].unshift(registerJs);
-    }
     // Register on app directory, solution: https://github.com/shadowwalker/next-pwa/pull/427
     if (entries["main-app"] && !entries["main-app"].includes(registerJs)) {
       if (Array.isArray(entries["main-app"])) {
@@ -49,7 +45,7 @@ const generateEntry = (entry) => {
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config) => {
-    const entry = generateEntry(config.entry);
+    const entry = generateAppDirEntry(config.entry);
     config.entry = () => entry;
 
     return config;
