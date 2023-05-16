@@ -4,8 +4,6 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Next PWA",
-  description: "Next PWA example using next-pwa and app directory",
   manifest: "/manifest.json",
   themeColor: "#ffffff",
 };
