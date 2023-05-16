@@ -3,7 +3,7 @@ const withPWAInit = require("next-pwa");
 
 const isDev = process.env.NODE_ENV !== "production";
 
-/** @type {import('next').NextConfig} */
+/** @type {import('next-pwa').PWAConfig} */
 const withPWA = withPWAInit({
   dest: "public",
   // Solution: https://github.com/shadowwalker/next-pwa/issues/424#issuecomment-1399683017
