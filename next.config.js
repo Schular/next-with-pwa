@@ -1,8 +1,6 @@
 const path = require("path");
 const withPWAInit = require("next-pwa");
 
-const isDev = process.env.NODE_ENV !== "production";
-
 /** @type {import('next-pwa').PWAConfig} */
 const withPWA = withPWAInit({
   dest: "public",
