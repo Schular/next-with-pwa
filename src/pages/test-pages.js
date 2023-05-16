@@ -11,7 +11,7 @@ export default function TestPages() {
           content="Next PWA example using next-pwa and app directory"
         />
       </Head>
-      <Home title="Pages" />;
+      <Home title="Pages" />
     </>
   );
 }
