@@ -4,7 +4,12 @@ Metadata icons generated using [PWABuilder](https://www.pwabuilder.com/imageGene
 
 ## Getting Started
 
-First, run the development server:
+First, install the npm packages:
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
