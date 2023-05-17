@@ -9,7 +9,9 @@ const withPWA = withPWAInit({
 });
 
 const generateAppDirEntry = (entry) => {
-  const registerJs = path.join(require.resolve("next-pwa"), "register.js");
+  const packagePath = require.resolve('next-pwa');
+  const packageDirectory = path.dirname(packagePath);
+  const registerJs = path.join(packageDirectory, "register.js");
 
   return entry().then((entries) => {
     // Register on app directory, solution: https://github.com/shadowwalker/next-pwa/pull/427
