@@ -43,13 +43,13 @@ export default function Home({ title = "" }) {
       </div>
 
       <div className={styles.grid}>
-        <Link className={styles.card} href="/">
+        <Link className={styles.card} href="/" prefetch={false}>
         <h2>
           App dir <span>-&gt;</span>
           <p>Home page using App directory with next-pwa.</p>
         </h2>
         </Link>
-        <Link className={styles.card} href="/test-pages">
+        <Link className={styles.card} href="/test-pages" prefetch={false}>
         <h2>
           Pages dir <span>-&gt;</span>
           <p>Test page using Pages directory with next-pwa.</p>
