@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "@/styles/page.module.css";
+import Link from "next/link";
 
 export default function Home({ title = "" }) {
   return (
@@ -42,6 +43,18 @@ export default function Home({ title = "" }) {
       </div>
 
       <div className={styles.grid}>
+        <Link className={styles.card} href="/">
+        <h2>
+          App dir <span>-&gt;</span>
+          <p>Home page using App directory with next-pwa.</p>
+        </h2>
+        </Link>
+        <Link className={styles.card} href="/test-pages">
+        <h2>
+          Pages dir <span>-&gt;</span>
+          <p>Test page using Pages directory with next-pwa.</p>
+        </h2>
+        </Link>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}

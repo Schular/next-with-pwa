@@ -14,7 +14,7 @@ const generateAppDirEntry = (entry) => {
   const registerJs = path.join(packageDirectory, "register.js");
 
   return entry().then((entries) => {
-    // Register on app directory, solution: https://github.com/shadowwalker/next-pwa/pull/427
+    // Register SW on App directory, solution: https://github.com/shadowwalker/next-pwa/pull/427
     if (entries["main-app"] && !entries["main-app"].includes(registerJs)) {
       if (Array.isArray(entries["main-app"])) {
         entries["main-app"].unshift(registerJs);
